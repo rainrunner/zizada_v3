@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Switch;
@@ -16,12 +17,13 @@ import android.widget.TextView;
 
 public class Home_activity extends Activity {
 
-
+    String str = "HALLO";
     Button Button_for_next_activity;
-    TextView textView,textView_1;
+    TextView textView, textView_1,textView3;
     RadioButton Radio1;
     Switch switch_1;
     ImageButton ibutton;
+    EditText Etext;
     int counter=0;
 
 
@@ -30,9 +32,11 @@ public class Home_activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activity);
 
+        Etext =(EditText) findViewById(R.id.editText);
+        textView = (TextView) findViewById(R.id.textView3);
         Button_for_next_activity = (Button) findViewById(R.id.button);
-        textView = (TextView) findViewById(R.id.textView);
-        textView_1 = (TextView) findViewById(R.id.textView2);
+        textView3= (TextView) findViewById(R.id.textView);
+        textView_1= (TextView) findViewById(R.id.textView2);
         Radio1 = (RadioButton) findViewById(R.id.radioButton);
         switch_1 = (Switch) findViewById(R.id.switch1);
         ibutton = (ImageButton) findViewById(R.id.imageButton);
@@ -44,13 +48,13 @@ public class Home_activity extends Activity {
         }else {
             textView_1.setText("NOPE");
         }*/
-        textView_1.setText("NOPE");
+        textView.setText("NOPE");
 
         ibutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 counter-=1;
-                textView_1.setText("counter =" + counter);
+                textView.setText("counter =" + counter);
             }
         });
 
@@ -61,18 +65,10 @@ public class Home_activity extends Activity {
 
                 //Intent nextScreen = new Intent(getApplicationContext(),activity_2.class);
                 //startActivity(nextScreen);
-
-            counter+=1;
-
-
-            textView.setText("Counter =" + counter);
-
-
-                if(counter==11){
-                    counter=0;
-                    textView.setText("Counter =" + counter);
-                }
-
+                str = (String) Etext.getText().toString();
+                counter=str.length();
+                textView_1.setText(str);
+                textView3.setText("Length = " + counter);
 
 
             }
@@ -83,9 +79,15 @@ public class Home_activity extends Activity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
-                    textView_1.setText("Switch ON");
+                    textView.setText("Switch ON");
+                    str=str.substring(3);
+                    if(str.length() >= 0){
+                        textView.setText(str);
+                    }
+
+
                 } else {
-                    textView_1.setText("Switch OFF");
+                    textView.setText("Switch OFF");
                 }
             }
         });
