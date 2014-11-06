@@ -32,15 +32,13 @@ public class Home_activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activity);
 
-        Etext =(EditText) findViewById(R.id.editText);
+        Etext =(EditText) findViewById(R.id.editText_zahl1);
         textView = (TextView) findViewById(R.id.textView3);
-        Button_for_next_activity = (Button) findViewById(R.id.button);
+        Button_for_next_activity = (Button) findViewById(R.id.go_to_A4);
         textView3= (TextView) findViewById(R.id.textView);
-        textView_1= (TextView) findViewById(R.id.textView2);
-        Radio1 = (RadioButton) findViewById(R.id.radioButton);
-        switch_1 = (Switch) findViewById(R.id.switch1);
+        textView_1= (TextView) findViewById(R.id.textView_Ausgabe);
         ibutton = (ImageButton) findViewById(R.id.imageButton);
-        switch_1.setChecked(true);
+
 
 
         /* if(switch1.isChecked()){
@@ -63,34 +61,18 @@ public class Home_activity extends Activity {
             @Override
             public void onClick(View v) {
 
-                //Intent nextScreen = new Intent(getApplicationContext(),activity_2.class);
-                //startActivity(nextScreen);
-                str = (String) Etext.getText().toString();
+                Intent nextScreen = new Intent(getApplicationContext(),A4_idk.class);
+                startActivity(nextScreen);
+                /*str = (String) Etext.getText().toString();
                 counter=str.length();
                 textView_1.setText(str);
-                textView3.setText("Length = " + counter);
+                textView3.setText("Length = " + counter);*/
 
 
             }
         });
 
-        switch_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if (isChecked) {
-                    textView.setText("Switch ON");
-                    str=str.substring(3);
-                    if(str.length() >= 0){
-                        textView.setText(str);
-                    }
-
-
-                } else {
-                    textView.setText("Switch OFF");
-                }
-            }
-        });
 
     }
 

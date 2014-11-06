@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/grafik_11"
+    tools:context="com.example.rainrunner.zizada_v3.A4_idk"
+    android:id="@+id/go_to_A4">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="200dp">
+
+        <Button
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a4_button_addieren"
+            android:id="@+id/a4_button_addieren"
+            android:layout_below="@+id/a4_button_subtrahieren"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/a4_button_mulziplizieren"
+            android:layout_alignEnd="@+id/a4_button_mulziplizieren"
+            android:textSize="14dp" />
+
+        <Button
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a4_button_subtrahieren"
+            android:id="@+id/a4_button_subtrahieren"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/a4_button_addieren"
+            android:layout_alignEnd="@+id/a4_button_addieren"
+            android:textSize="14dp" />
+
+        <Button
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a4_button_mulziplizieren"
+            android:id="@+id/a4_button_mulziplizieren"
+            android:layout_below="@+id/a4_button_addieren"
+            android:layout_alignParentLeft="true"
+            android:textSize="14dp" />
+
+        <Button
+            style="?android:borderlessButtonStyle"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a4_button_dividieren"
+            android:id="@+id/a4_button_dividieren"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/a4_button_mulziplizieren"
+            android:layout_below="@+id/a4_button_mulziplizieren"
+            android:layout_alignParentLeft="true"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_zahl1"
+            android:layout_below="@+id/a4_button_dividieren"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="30dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_Zahl2"
+            android:layout_below="@+id/editText_zahl1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="30dp"
+            android:layout_weight="1" />
+
+        <Button
+            style="?android:borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a4_button_zurueck"
+            android:id="@+id/a4_button_zurueck"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="false"
+            android:textSize="70dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView_Ausgabe"
+            android:textSize="40dp"
+            android:layout_above="@+id/a4_button_addieren"
+            android:layout_alignRight="@+id/editText_zahl1"
+            android:layout_alignEnd="@+id/editText_zahl1"
+            android:singleLine="true"
+            android:textAlignment="center" />
+    </FrameLayout>
+
+</RelativeLayout>

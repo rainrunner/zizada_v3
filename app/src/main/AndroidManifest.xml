@@ -22,6 +22,10 @@
             android:label="@string/title_activity_activity_2"
             android:theme="@style/FullscreenTheme" >
         </activity>
+        <activity
+            android:name=".A4_idk"
+            android:label="@string/title_activity_a4_idk" >
+        </activity>
     </application>
 
 </manifest>

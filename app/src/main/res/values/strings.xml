@@ -7,5 +7,12 @@
     <string name="title_activity_activity_2">activity_2</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_a3_idk">A3_idk</string>
+    <string name="a4_button_zurueck">back</string>
+    <string name="a4_button_mulziplizieren">mulziplizieren</string>
+    <string name="a4_button_addieren">addieren</string>
+    <string name="a4_button_subtrahieren">subtrahieren</string>
+    <string name="a4_button_dividieren">dividieren</string>
+    <string name="title_activity_a4_idk">A4_idk</string>
 
 </resources>
